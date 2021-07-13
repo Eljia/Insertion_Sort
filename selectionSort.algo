@@ -1,0 +1,25 @@
+PROCEDURE swap(VAR T :ARRAY_OF INTEGER ; int1,int2 : INTEGER ; )
+VAR
+tmp : INTEGER ;
+BEGIN
+tmp := T [int1] ;
+T[in1] := T [in2]
+T [in2] :=tmp ;
+END;
+
+PROCEDURE insertion_sort ( VAR T :ARRAY_OF INTEGER ; n:INTEGER)
+VAR
+    T :ARRAY_OF INTEGER[50];
+    i, j, key : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        key := T[i];
+        j := i-1;
+            WHILE ( j >= 0) && T[j] > key) DO
+            T[ j+1] := T[j];
+            j := j-1;
+            END_WHILE
+        T[j+1] := key;
+    END_FOR
+END
+
